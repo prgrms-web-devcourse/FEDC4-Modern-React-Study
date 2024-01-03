@@ -1,0 +1,43 @@
+name: 퀴즈 템플릿
+description: 이번 주 주제에 해당하는 퀴즈를 작성해주세요.
+title: '[<n>장][<이름>] 제목'
+labels: ['quiz']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        이번 장에 해당하는 퀴즈를 작성해주세요.
+  - type: textarea
+    id: quiz
+    attributes:
+      label: 퀴즈
+      description: 문제의 질문을 작성해주세요.
+      placeholder: 예) JSX는 어떻게 자바스크립트에서 변환될까요?
+    validations:
+      required: true
+  - type: textarea
+    id: answer
+    attributes:
+      label: 답
+      value: |
+        <details>
+        <summary>정답</summary>
+        <div markdown="1">    
+        정답 설명
+        </div>
+        </details>
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 댓글 작성법
+      description: 아래 내용을 수정하지 말고 이슈를 생성해주세요.
+      value: |
+        (다음과 같이 답을 작성해 댓글로 달아주세요)
+        &lt;details&gt;
+        &lt;summary&gt;정답&lt;/summary&gt;
+        &lt;div markdown="1"&gt;    
+        정답 설명
+        &lt;/div&gt;
+        &lt;/details&gt;
